@@ -30,7 +30,7 @@ object AvgDurationProcess extends Logging with BikeTripReader {
   def avgDurationCalculator(spark: SparkSession, conf: BikePlatformConf, outputPath: String): Unit = {
     val bikeShareTripDf = readBikeShareTrip(conf, spark)
 
-    //use groupBy to group rows by unique users,
+    //use groupBy to group rows by unique users
     //use agg() and avg() to calculate average duration of trips for each user today.
     val bikeShareTripAggDf = bikeShareTripDf
       .groupBy(fields.map(col):_*)
