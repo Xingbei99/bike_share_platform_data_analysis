@@ -8,7 +8,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
 
 // Calculate average duration of trips of each user on the processed date
-//Output: Write bike share data on the processed data to output path.
+//Output: Write bike share data on the processed date to output path.
 object AvgDurationProcess extends Logging with BikeTripReader {
   //Store selected fields in a list to increase readability
   val fields = List("user_id",
